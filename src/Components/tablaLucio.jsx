@@ -21,7 +21,7 @@ function TablaLucio(props) {
         props.lista.map((x, i) =>
             <tr key={i}>
                 <td>{i + 1}</td>
-                <td>{x.move.name}</td>
+                <td>{x.descripcion}</td>
                 <td>
                     {<ModalLucio listaForms={vM} />}
                 </td>

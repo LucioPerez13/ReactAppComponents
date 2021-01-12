@@ -3,11 +3,12 @@ import axios from 'axios';
 import TablaLucio from "./tablaLucio";
 
 function Crud() {
-  const [pokemon, setPokemon] = useState([]);
+  const [products, setProducts] = useState([]);
   const getData = async () => {
-    await axios.get("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+    await axios.get("https://localhost:44347/api/productos/")
       .then(res => {
-        setPokemon(res.data.moves)
+        console.log(res.data)
+        setProducts(res.data)
       })
   }
   useEffect(() => {
@@ -29,7 +30,7 @@ function Crud() {
             </tr>
           </thead>
           <tbody>
-            <TablaLucio lista={pokemon} />
+            <TablaLucio lista={products} />
           </tbody>
         </table>
       </div>
