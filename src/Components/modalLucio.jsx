@@ -14,7 +14,7 @@ function ModalLucio(props) {
 
             <Modal isOpen={show} onClosed={handleClose}>
                 <ModalHeader>
-                    Modal en react
+                    Actualizar producto
                 </ModalHeader>
                 <ModalBody>
                     <Form>
@@ -22,9 +22,9 @@ function ModalLucio(props) {
                             {
                                 props.listaForms.map((x, i) =>
                                     <div key={i}>
-                                        <Label for="exampleEmail">{x.description}</Label>
+                                        <Label for="precio">{x.description}</Label>
                                         <Input type={x.type} name={x.name} placeholder={x.description} />
-                                                                  
+                                                        <br></br>          
                                     </div>
                                 )
                             }

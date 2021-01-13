@@ -4,17 +4,16 @@ import ModalLucio from './modalLucio';
 
 const vM = [
     {
-        type: "email",
-        name: "email",
-        description: "Correo"
+        type: "text",
+        name: "descripcion",
+        description: "Descripcion"
     },
     {
         type: "text",
-        name: "user",
-        description: "Usuario"
+        name: "precio",
+        description: "Precio"
     }
 ]
-
 
 function TablaLucio(props) {
     return (
@@ -22,6 +21,7 @@ function TablaLucio(props) {
             <tr key={i}>
                 <td>{i + 1}</td>
                 <td>{x.descripcion}</td>
+                <td>{x.precio}</td>
                 <td>
                     {<ModalLucio listaForms={vM} />}
                 </td>
